@@ -51,10 +51,10 @@ const messageList = [
   },
   {
     id: 6,
-    photo: "https://robohash.org/Jack Frusciante.png",
+    photo: "https://robohash.org/John Frusciante.png",
     title: "Dave wasn't exactly sure how he had ended up",
     body: "Dave wasn't exactly sure how he had ended up in this predicament. He ran through all the events that had lead to this current situation and it still didn't make sense. He wanted to spend some time to try and make sense of it all, but he had higher priorities at the moment. The first was how to get out of his current situation of being naked in a tree with snow falling all around and no way for him to get down.",
-    userName: "Jack Frusciante",
+    userName: "John Frusciante",
     tags: ["english", "classic", "american"],
     email: "johnorjackfrusciante@gmail.com",
     reactions: 3,
