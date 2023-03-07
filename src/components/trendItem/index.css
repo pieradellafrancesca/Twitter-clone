@@ -1,0 +1,28 @@
+.TrendItem {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: rgba(176, 196, 222, 0.25);
+  border-bottom: 1px solid lightgray;
+}
+
+.TrendItem p:nth-child(1),
+.TrendItem p:nth-child(3),
+.TrendItem p:nth-child(4) {
+  margin: 2px;
+  color: gray;
+}
+
+.TrendItem p:nth-child(2) {
+  margin: 0;
+  font-weight: bold;
+}
+
+.TrendItem p:nth-child(3) {
+  font-size: 0.9rem;
+}
+
+.TrendItem p:nth-child(1),
+.TrendItem p:nth-child(4) {
+  font-size: 0.8rem;
+}

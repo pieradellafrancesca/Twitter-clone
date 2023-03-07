@@ -1,0 +1,36 @@
+.Header {
+  /* border: 2px solid red; */
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  z-index: 1;
+}
+
+.Header ul {
+  padding: 0 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header__item {
+  list-style: none;
+}
+
+.Header__icon {
+  width: 25px;
+  height: 25px;
+  color: #00acee;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 912px) {
+  .Header {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+  }
+}

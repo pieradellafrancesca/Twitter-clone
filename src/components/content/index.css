@@ -1,0 +1,10 @@
+.Content {
+  width: 100%;
+  padding: 0 30px;
+}
+
+@media screen and (min-width: 912px) {
+  .Content {
+    width: 45%;
+  }
+}

@@ -1,0 +1,21 @@
+.HamburgerMenu {
+  display: block;
+  border-right: 1px solid lightgray;
+  background-color: white;
+  position: absolute;
+  left: -240px;
+  top: 62px;
+  width: 240px;
+  height: 100vh;
+  transition: all 0.35s;
+}
+
+.show {
+  left: 0;
+}
+
+@media screen and (min-width: 912px) {
+  .HamburgerMenu {
+    display: none;
+  }
+}

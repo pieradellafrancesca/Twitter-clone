@@ -1,0 +1,18 @@
+.App {
+  display: flex;
+  width: 100%;
+}
+
+@media screen and (max-width: 820px) {
+  .Content {
+    width: 100%;
+  }
+
+  .SideMenu {
+    display: none;
+  }
+
+  .SideTrends {
+    display: none;
+  }
+}

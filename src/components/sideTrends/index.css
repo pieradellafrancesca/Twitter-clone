@@ -1,0 +1,12 @@
+.SideTrends {
+  width: 30%;
+  border-right: 10px solid black;
+  display: none;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 912px) {
+  .SideTrends {
+    display: flex;
+  }
+}

@@ -1,0 +1,38 @@
+.MenuContent {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.MenuContent ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.MenuContent__item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.MenuContent__item:hover {
+  color: #00acee;
+}
+
+.twitter-logo {
+  width: 25px;
+  height: 25px;
+  color: #00acee;
+}
+
+.birdhouse,
+.hashtag,
+.notifications,
+.messages,
+.bookmarks {
+  width: 25px;
+  height: 25px;
+}

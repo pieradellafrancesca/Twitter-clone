@@ -1,0 +1,38 @@
+.Footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  border-top: 1px solid lightgray;
+}
+
+.Footer ul {
+  padding: 0 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Footer__item {
+  list-style: none;
+}
+
+.Footer__icons {
+  width: 25px;
+  height: 25px;
+  color: gray;
+  cursor: pointer;
+}
+
+.Footer__icons:hover {
+  color: #00acee;
+}
+
+@media screen and (min-width: 912px) {
+  .Footer {
+    display: none;
+    /* position: relative;
+    border-top: 1px solid lightgray; */
+  }
+}
