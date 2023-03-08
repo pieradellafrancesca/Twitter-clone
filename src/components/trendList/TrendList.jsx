@@ -10,6 +10,7 @@ const TrendList = () => {
         type="text"
         placeholder="🔍 Search Twitter"
         className="TrendList__input"
+        onInput={() => {}}
       />
       <div className="TrendList__content">
         <div className="TrendList__first-line">
@@ -17,8 +18,8 @@ const TrendList = () => {
           <BsGear className="gear" />
         </div>
 
-        {trendList.map((trend, index) => (
-          <TrendItem trendData={trend} key={index} />
+        {trendList.map((trend) => (
+          <TrendItem trendData={trend} key={trend.id} />
         ))}
       </div>
     </div>

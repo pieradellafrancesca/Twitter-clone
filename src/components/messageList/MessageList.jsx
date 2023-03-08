@@ -1,13 +1,20 @@
-import "./index.css";
-import messageList from "../../mocks/messageList";
+import { useState, useEffect } from "react";
 import MessageItem from "../messageItem";
+import "./index.css";
 
 const MessageList = () => {
-  console.log(messageList);
+  const [postList, setPostList] = useState([]);
+
+  useEffect(() => {
+    fetch("https://dummyjson.com/posts")
+      .then((res) => res.json())
+      .then((data) => setPostList(data.posts));
+  }, []);
+
   return (
     <div className="MessageList">
-      {messageList.map((message, index) => (
-        <MessageItem messageData={message} key={index} />
+      {postList.map((message) => (
+        <MessageItem messageData={message} key={message.id} />
       ))}
     </div>
   );
