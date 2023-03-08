@@ -2,15 +2,22 @@ import "./index.css";
 import trendList from "../../mocks/trendList";
 import TrendItem from "../trendItem";
 import { BsGear } from "react-icons/bs";
+import { useState } from "react";
 
 const TrendList = () => {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInput = (event) => {
+    setInputValue(event.target.value);
+  };
+
   return (
     <div className="TrendList">
       <input
         type="text"
         placeholder="🔍 Search Twitter"
         className="TrendList__input"
-        onInput={() => {}}
+        onInput={handleInput}
       />
       <div className="TrendList__content">
         <div className="TrendList__first-line">
@@ -18,9 +25,11 @@ const TrendList = () => {
           <BsGear className="gear" />
         </div>
 
-        {trendList.map((trend) => (
-          <TrendItem trendData={trend} key={trend.id} />
-        ))}
+        {trendList.map((trend) =>
+          trend.title.toLowerCase().includes(inputValue) ? (
+            <TrendItem trendData={trend} key={trend.id} />
+          ) : null
+        )}
       </div>
     </div>
   );
