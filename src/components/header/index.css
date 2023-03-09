@@ -1,12 +1,19 @@
 .Header {
   /* border: 2px solid red; */
-  position: fixed;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   left: 0;
   top: 0;
   background-color: white;
   border-bottom: 1px solid lightgray;
   z-index: 1;
+}
+
+.Header__up {
+  width: 100%;
+  display: flex;
 }
 
 .Header ul {
@@ -27,10 +34,39 @@
   cursor: pointer;
 }
 
+.Header__down {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.Header__down--profile {
+  width: 35px;
+  height: 35px;
+  border: 1px dashed;
+  border-radius: 100%;
+  cursor: pointer;
+  color: rgb(70, 14, 14);
+}
+
+.Header__down input {
+  padding: 0 0 0 10px;
+  width: 80%;
+  height: 28px;
+  border: 0;
+  background-color: #eaeff1;
+  border-radius: 24px;
+  outline: none;
+}
+
 @media screen and (min-width: 912px) {
   .Header {
     display: flex;
     border-bottom: 1px solid lightgray;
-    position: relative;
+    position: sticky;
+    top: 0;
   }
 }

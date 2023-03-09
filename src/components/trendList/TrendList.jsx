@@ -16,6 +16,7 @@ const TrendList = () => {
       <input
         type="text"
         placeholder="🔍 Search Twitter"
+        value={inputValue}
         className="TrendList__input"
         onInput={handleInput}
       />

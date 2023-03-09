@@ -6,6 +6,8 @@
 }
 
 .TrendList__input {
+  position: sticky;
+  top: 12px;
   width: 70%;
   height: 32px;
   border: none;
