@@ -19,13 +19,13 @@
 }
 
 .MenuContent__item:hover {
-  color: #00acee;
+  color: crimson;
 }
 
 .twitter-logo {
   width: 25px;
   height: 25px;
-  color: #00acee;
+  color: crimson;
 }
 
 .birdhouse,

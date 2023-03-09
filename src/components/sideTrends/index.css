@@ -1,14 +1,20 @@
 .SideTrends {
-  width: 30%;
-  border-right: 10px solid black;
   display: none;
-  flex-direction: column;
 }
 
 @media screen and (min-width: 912px) {
   .SideTrends {
+    width: 30%;
     position: absolute;
     display: flex;
+    flex-direction: column;
     right: 0;
+    border-left: 1px solid lightgray;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+
+  .SideTrends::-webkit-scrollbar {
+    display: none;
   }
 }

@@ -3,7 +3,10 @@
   padding: 0 30px;
   height: 100vh;
   overflow-y: scroll;
-  transition: all 1s;
+}
+
+.Content::-webkit-scrollbar {
+  display: none;
 }
 
 @media screen and (min-width: 912px) {

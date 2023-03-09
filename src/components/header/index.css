@@ -16,6 +16,11 @@
   display: flex;
 }
 
+.notVisible {
+  position: absolute;
+  top: -61px;
+}
+
 .Header ul {
   padding: 0 10px;
   width: 100%;
@@ -30,7 +35,7 @@
 .Header__icon {
   width: 25px;
   height: 25px;
-  color: #00acee;
+  color: crimson;
   cursor: pointer;
 }
 
@@ -39,8 +44,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 12px;
-  padding-left: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
 .Header__down--profile {
@@ -68,5 +72,10 @@
     border-bottom: 1px solid lightgray;
     position: sticky;
     top: 0;
+  }
+
+  .notVisible {
+    /* position: absolute; */
+    top: -70px;
   }
 }

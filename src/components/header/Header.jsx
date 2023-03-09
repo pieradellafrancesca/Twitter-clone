@@ -5,7 +5,7 @@ import { SiSurveymonkey } from "react-icons/si";
 import HamburgerMenu from "../hamburgerMenu";
 import "./index.css";
 
-const Header = () => {
+const Header = ({ showHeaderUp }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const hamburgerClick = () => {
@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <div className="Header">
-      <div className="Header__up">
+      <div className={`Header__up ${!showHeaderUp ? "notVisible" : ""}`}>
         <ul>
           <li className="Header__item">
             <HiOutlineMenu className="Header__icon" onClick={hamburgerClick} />

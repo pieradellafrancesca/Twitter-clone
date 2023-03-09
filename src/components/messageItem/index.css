@@ -7,7 +7,7 @@
 .MessageItem__img {
   width: 40px;
   height: 40px;
-  background-color: #00abee32;
+  background-color: rgba(220, 20, 60, 0.1);
   border-radius: 25px;
 }
 
@@ -44,5 +44,5 @@
 }
 
 .messageItem-icon:hover {
-  color: #00abee96;
+  color: rgba(220, 20, 60, 0.7);
 }
