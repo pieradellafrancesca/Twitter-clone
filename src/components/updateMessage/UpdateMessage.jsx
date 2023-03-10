@@ -16,7 +16,7 @@ const UpdateMessage = ({ postId, setModalUpdate }) => {
       body: JSON.stringify({
         body: messageInput,
       }),
-    }).then(setModalUpdate(false));
+    }).then(() => setModalUpdate(false));
   };
 
   const onHandleClick = () => {
@@ -35,6 +35,7 @@ const UpdateMessage = ({ postId, setModalUpdate }) => {
             className="UpdateMessage__content--input"
             value={messageInput}
             onChange={onHandleChange}
+            required
           />
           <input
             type="submit"

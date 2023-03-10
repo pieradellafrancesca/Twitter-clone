@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import MessageItem from "../messageItem";
 import "./index.css";
 
-const MessageList = ({ setPostId, setModalUpdate }) => {
+const MessageList = ({ headerInput, setPostId, setModalUpdate }) => {
   const [postList, setPostList] = useState([]);
 
   useEffect(() => {
@@ -11,9 +11,13 @@ const MessageList = ({ setPostId, setModalUpdate }) => {
       .then((data) => setPostList(data.posts));
   }, []);
 
+  const filteredPosts = postList.filter((message) =>
+    message.body.toLowerCase().includes(headerInput)
+  );
+
   return (
     <div className="MessageList">
-      {postList.map((message) => (
+      {filteredPosts.map((message) => (
         <MessageItem
           messageData={message}
           key={message.id}

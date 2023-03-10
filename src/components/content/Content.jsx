@@ -13,6 +13,8 @@ const Content = ({ setPostId, setModalUpdate }) => {
 
   const [showHeaderUp, setShowHeaderUp] = useState(true);
 
+  const [headerInput, setHeaderInput] = useState("");
+
   const scrollPage = () => {
     // console.log(messageListTrendRef.current.scrollTop);
     messageListTrendRef.current.scrollTop > 10
@@ -21,8 +23,12 @@ const Content = ({ setPostId, setModalUpdate }) => {
   };
   return (
     <div ref={messageListTrendRef} className="Content" onScroll={scrollPage}>
-      <Header showHeaderUp={showHeaderUp} />
-      <MessageList setPostId={setPostId} setModalUpdate={setModalUpdate} />
+      <Header showHeaderUp={showHeaderUp} setHeaderInput={setHeaderInput} />
+      <MessageList
+        headerInput={headerInput}
+        setPostId={setPostId}
+        setModalUpdate={setModalUpdate}
+      />
       <Footer />
     </div>
   );

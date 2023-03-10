@@ -5,11 +5,23 @@ import { SiSurveymonkey } from "react-icons/si";
 import HamburgerMenu from "../hamburgerMenu";
 import "./index.css";
 
-const Header = ({ showHeaderUp }) => {
+const Header = ({ showHeaderUp, setHeaderInput }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const hamburgerClick = () => {
     setShowMenu((prev) => !prev);
+  };
+
+  const [inputValue, setInputValue] = useState("");
+
+  // al cambio di ogni input mi salva il nuovo valore:
+  const onHandleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const onHandleSubmit = (event) => {
+    event.preventDefault();
+    setHeaderInput(inputValue);
   };
 
   return (
@@ -30,7 +42,14 @@ const Header = ({ showHeaderUp }) => {
       </div>
       <div className="Header__down">
         <SiSurveymonkey className="Header__down--profile" />
-        <input type="text" placeholder="What's happening?" />
+        <form onSubmit={onHandleSubmit}>
+          <input
+            type="text"
+            placeholder="What's happening?"
+            value={inputValue}
+            onChange={onHandleChange}
+          />
+        </form>
       </div>
     </div>
   );

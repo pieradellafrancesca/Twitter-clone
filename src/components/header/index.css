@@ -57,9 +57,15 @@
   color: rgb(70, 14, 14);
 }
 
-.Header__down input {
+.Header__down form {
   padding: 0 0 0 10px;
-  width: 80%;
+  width: 100%;
+  height: 28px;
+}
+
+.Header__down form input {
+  padding: 0 0 0 10px;
+  width: 100%;
   height: 28px;
   border: 0;
   background-color: #eaeff1;
