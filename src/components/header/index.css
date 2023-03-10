@@ -14,11 +14,12 @@
 .Header__up {
   width: 100%;
   display: flex;
+  transition: all 0.25s;
 }
 
 .notVisible {
   position: absolute;
-  top: -61px;
+  transform: translateY(-61px);
 }
 
 .Header ul {
@@ -76,6 +77,6 @@
 
   .notVisible {
     /* position: absolute; */
-    top: -70px;
+    transform: translateY(-61px);
   }
 }

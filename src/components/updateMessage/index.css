@@ -1,0 +1,86 @@
+.UpdateMessage {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.UpdateMessage__overlay {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.UpdateMessage__content {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 90%;
+  height: 300px;
+  background-color: white;
+  box-shadow: 0px -10px 30px 0 #000000;
+  padding: 30px;
+  border-radius: 18px;
+  z-index: 1;
+}
+
+.UpdateMessage__content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 70px;
+}
+
+.UpdateMessage__content--input {
+  border: none;
+  outline: none;
+  text-align: center;
+  border-radius: 24px;
+  padding: 10px;
+  background-color: #eaeff1;
+  width: 80%;
+}
+
+.UpdateMessage__content--submit {
+  border: none;
+  border-radius: 24px;
+  padding: 10px;
+  background-color: #717577;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  width: 50%;
+  cursor: pointer;
+}
+
+.UpdateMessage__content--submit:hover {
+  background-color: crimson;
+}
+
+@media screen and (min-width: 912px) {
+  .UpdateMessage__overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  .UpdateMessage__content {
+    width: 500px;
+  }
+
+  .UpdateMessage__content--input {
+    width: 400px;
+  }
+
+  .UpdateMessage__content--submit {
+    width: 200px;
+  }
+}

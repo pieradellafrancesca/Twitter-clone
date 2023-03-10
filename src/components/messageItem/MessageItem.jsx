@@ -8,8 +8,8 @@ import {
 } from "react-icons/hi2";
 import "./index.css";
 
-const MessageItem = ({ messageData }) => {
-  const { userId, body } = messageData;
+const MessageItem = ({ messageData, setPostId, setModalUpdate }) => {
+  const { id, userId, body } = messageData;
 
   const [userItem, setUserItem] = useState({});
 
@@ -18,6 +18,11 @@ const MessageItem = ({ messageData }) => {
       .then((res) => res.json())
       .then((data) => setUserItem(data));
   }, []);
+
+  const openUpdate = () => {
+    setModalUpdate(true);
+    setPostId(id);
+  };
 
   return (
     <div className="MessageItem">
@@ -32,7 +37,10 @@ const MessageItem = ({ messageData }) => {
         <p>{body}</p>
         <div className="MessageItem__content--icons">
           <HiOutlineChatBubbleOvalLeft className="messageItem-icon" />
-          <HiOutlineArrowPathRoundedSquare className="messageItem-icon" />
+          <HiOutlineArrowPathRoundedSquare
+            className="messageItem-icon"
+            onClick={openUpdate}
+          />
           <HiOutlineHeart className="messageItem-icon" />
           <HiArrowUpTray className="messageItem-icon" />
         </div>
