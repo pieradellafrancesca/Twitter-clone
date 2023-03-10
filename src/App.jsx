@@ -7,14 +7,14 @@ import "./App.css";
 
 function App() {
   const [postId, setPostId] = useState("");
-  const [ModalUpdate, setModalUpdate] = useState(false);
+  const [modalUpdate, setModalUpdate] = useState(false);
 
   return (
     <div className="App">
       <SideMenu />
       <Content setPostId={setPostId} setModalUpdate={setModalUpdate} />
       <SideTrends />
-      {ModalUpdate && (
+      {modalUpdate && (
         <UpdateMessage postId={postId} setModalUpdate={setModalUpdate} />
       )}
     </div>
